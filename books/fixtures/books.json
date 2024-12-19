@@ -180,6 +180,97 @@
            "category":1,
            "image":"urth_of_the_new_sun.webp"
         }
+     },
+     {
+        "pk":15,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780765321350",
+           "name":"The Best of Gene Wolfe",
+           "published":"2009",
+           "description":"The definitive collection of some of the best fiction from esteemed writer Gene Wolfe.",
+           "price":9.99,
+           "category":2,
+           "image":"best_of_gene_wolfe.webp"
+        }
+     },
+     {
+        "pk":16,
+        "model":"books.book",
+        "fields":{
+           "sku":"9781568658070",
+           "name":"The Book of the New Sun",
+           "published":"1983",
+           "description":"The Book of the New Sun is an extraordinary epic, set a million years in the future, on an Earth transformed in mysterious and wondrous ways, in a time when our present culture is no longer even a memory. Severian, the central character, is a torturer, exiled from his guild after falling in love with one of his victims, and journeying to the distant city of Thrax, armed with his ancient executioner's sword, Terminus Est. This edition contains the first four volumes of the series.",
+           "price":9.99,
+           "category":2,
+           "image":"book_of_the_new_sun.webp"
+        }
+     },
+     {
+        "pk":17,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780739416891",
+           "name":"The Book of the Short Sun",
+           "published":"2001",
+           "description":"When The Book of the Long Sun, Gene Wolfe’s science fantasy masterpiece, concluded, the Whorl – a giant generational starship sent out from Urth 300 years before – had arrived at its destination, a solar system with two habitable planets, Blue and Green. At the urging of Whorl’s religious leader, Patera Silk, the people left the ship for an uncertain future on Blue – a world already inhabited by the inhumi, blood-drinking aliens who take human form.",
+           "price":9.99,
+           "category":2,
+           "image":"book_of_the_short_sun.webp"
+        }
+     },
+     {
+        "pk":18,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780575094222",
+           "name":"The Fifth Head of Cerberus",
+           "published":"1972",
+           "description":"Far out from Earth, two sister planets, Saint Anne and Saint Croix, circle each other in an eternal dance. It is said a race of shapeshifters once lived here, only to perish when men came. But one man believes they can still be found, somewhere in the back of the beyond.",
+           "price":9.99,
+           "category":2,
+           "image":"fifth_head_of_cerberus.webp"
+        }
+     },
+     {
+        "pk":19,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780765302946",
+           "name":"Latro in the Mist",
+           "published":"2006",
+           "description":"This omnibus presents the story of Latro, a Roman mercenary who while fighting in Greece received a head injury that deprived him of his short-term memory but gave him in return the ability to see and converse with the supernatural creatures and the gods and goddesses, who invisibly inhabit the ancient landscape.",
+           "price":9.99,
+           "category":2,
+           "image":"latro_in_the_mist.webp"
+        }
+     },
+     {
+        "pk":20,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780312872915",
+           "name":"Litany of the Long Sun",
+           "published":"1996",
+           "description":"The story of Patera Silk, a devout priest whose destiny is wrapped up with the gods he serves, takes place within the Whorl, a vast, cylindrical starship that has traveled for generations and is crumbling into disrepair. Through a strange and amazing series of events, Silk finds himself descending to base thievery, running afoul of a notorious crime lord, befriending a cyborg soldier, and encountering at least one of the gods of Mainframe.",
+           "price":9.99,
+           "category":2,
+           "image":"litany_of_the_long_sun.webp"
+        }
+     },
+     {
+        "pk":21,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780575077102",
+           "name":"The Wizard Knight",
+           "published":"2005",
+           "description":"The Wizard Knight springs from the myths, legends and literature of times past. A teenager passes from Earth to a magical realm of seven worlds, where he is given a hero's adult body and named Able. Though forced to act as a man, inside he is still a boy, even as he sets off to find his destined sword and become a knight. ",
+           "price":9.99,
+           "category":2,
+           "image":"wizard_knight.webp"
+        }
      }
 
 ]
