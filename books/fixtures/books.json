@@ -271,6 +271,148 @@
            "category":2,
            "image":"wizard_knight.webp"
         }
+     },
+     {
+        "pk":22,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780099392309",
+           "name":"Book of Days",
+           "published":"1981",
+           "description":"Short story collection by American science fiction author Gene Wolfe. Each story is paired with a holiday within the calendar year that is thematically linked to the content of the story.",
+           "price":8.99,
+           "category":3,
+           "image":"book_of_days.webp"
+        }
+     },
+     {
+        "pk":23,
+        "model":"books.book",
+        "fields":{
+           "sku":"9781645241201",
+           "name":"The Dead Man and Other Horror Stories",
+           "published":"2023",
+           "description":"This volume collects twenty-eight tales spanning nearly a half century--six of them never before collected--and gathered from venues as varied as men's magazines, periodicals devoted to short works of fantasy and science fiction, and tribute anthologies to the works of authors as wildly opposed in their literary visions as Dante and H. P. Lovecraft",
+           "price":8.99,
+           "category":3,
+           "image":"dead_man_and_other_horror_stories.webp"
+        }
+     },
+     {
+        "pk":24,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780765310330",
+           "name":"Endangered Species",
+           "published":"1989",
+           "description":"Endangered Species is a hefty volume of over 30 unforgettable stories in a variety of genres-- SF, fantasy, horror, mainstream-many of them offering variations on themes and situations found in folklore and fairy tales, and including two stories, 'The Cat' and 'The Map,' which are set in the universe of his New Sun novels.",
+           "price":8.99,
+           "category":3,
+           "image":"endangered_species.webp"
+        }
+     },
+     {
+        "pk":25,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780312863548",
+           "name":"The Island of Doctor Death and Other Stories and Other Stories",
+           "published":"1980",
+           "description":"A superb collection of science fiction and fantasy stories, The Island of Doctor Death and Other Stories and Other Stories is a book that transcends all genre definitions. The stories within are mined with depth charges, explosions of meaning and illumination that will keep you thinking and feeling long after you have finished reading.",
+           "price":8.99,
+           "category":3,
+           "image":"island_of_doctor_death.webp"
+        }
+     },
+     {
+        "pk":26,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780915368839",
+           "name":"Plan(e)t Engineering",
+           "published":"1984",
+           "description":"A collection of short stories inspired by Wolfe's time as an engineer, it features articles he wrote for 'Plant Engineering', a leading journal for chemical engineers.",
+           "price":8.99,
+           "category":3,
+           "image":"planet_engineering.webp"
+        }
+     },
+     {
+        "pk":27,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780765312037",
+           "name":"Starwater Strains",
+           "published":"2000",
+           "description":"A short story collection primarily showcasing some of Wolfe's best forays into sci-fi.",
+           "price":8.99,
+           "category":3,
+           "image":"starwater_strains.webp"
+        }
+     },
+     {
+        "pk":28,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780312890490",
+           "name":"Storeys from the Old Hotel",
+           "published":"1988",
+           "description":"Storeys from the Old Hotel includes many of Gene Wolfe's most appealing and engaging works, from short-shorts that can be read in single setting to whimsical fantasy and even Sherlock Holmes pastiches. It is a literary feast for anyone interested in the best science fiction has to offer.",
+           "price":8.99,
+           "category":3,
+           "image":"storeys_from_the_old_hotel.webp"
+        }
+     },
+     {
+        "pk":29,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780312872786",
+           "name":"Strange Travelers",
+           "published":"2000",
+           "description":"Strange Travelers contains a whole decade of achievement. Some of these stories were award nominees, some were controversial, but each is unique and beautifully written.",
+           "price":8.99,
+           "category":3,
+           "image":"strange_travelers.webp"
+        }
+     },
+     {
+        "pk":30,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780917488146",
+           "name":"The Wolfe Archipelago",
+           "published":"1983",
+           "description":"This title collects four stories, including 'The Death of Doctor Island, winner of the 1974 Nebula award for best novella",
+           "price":8.99,
+           "category":3,
+           "image":"wolfe_arhipelago.webp"
+        }
+     },
+     {
+        "pk":31,
+        "model":"books.book",
+        "fields":{
+           "sku":"9780921322320",
+           "name":"Young Wolfe",
+           "published":"1992",
+           "description":"A collection of nine early short stories from SF author Gene Wolfe, from 1951-1967.",
+           "price":8.99,
+           "category":3,
+           "image":"young_wolfe.webp"
+        }
+     },
+     {
+        "pk":32,
+        "model":"books.book",
+        "fields":{
+           "sku":"9781250846211",
+           "name":"The Wolfe at the Door",
+           "published":"2023",
+           "description":"The Wolfe at the Door is a brand new collection from one of America’s premiere literary giants, showcasing some material been seen before. Short stories, yes, but also poems, essays, and ephemera that gives us a window into the mind of a literary powerhouse whose world view changed generations of readers in their perception of the universe.",
+           "price":8.99,
+           "category":3,
+           "image":"wolfe_at_the_door.webp"
+        }
      }
-
 ]
