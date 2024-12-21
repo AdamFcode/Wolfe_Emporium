@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container marketing top-fit">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading"> {{ book.name }} <span class="text-muted">{{ book.published }}</span>
+            </h2>
+            <h3>{{ book.category }}</h3>
+            <h4>{{ book.price }}</h4>
+            <p class="lead">{{ book.description }}</p>
+        </div>
+        <div class="col-md-5">
+            <img class="" src="{{ book.image.url }}" width="400" height="500">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+
+
+   <!-- FOOTER -->
+   <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+</main>
+{% endblock %}
