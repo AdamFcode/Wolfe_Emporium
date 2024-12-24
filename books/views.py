@@ -1,18 +1,24 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Book
+from .models import Book, Category 
+from django.db.models.functions import Lower
 
 # Create your views here.
 
 def all_books(request):
 
     books = Book.objects.all()
+    categories = None 
     query = None
     sort = None
     direction = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            books = books.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -20,6 +26,8 @@ def all_books(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 books = books.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -42,6 +50,7 @@ def all_books(request):
         'books': books,
         'search_term': query,
         'current_sorting': current_sorting,
+        'current_categories': categories,
     }
     return render(request, 'books/books.html', context)
 

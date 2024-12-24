@@ -7,7 +7,15 @@
         <div class="col-md-7">
             <h2 class="featurette-heading"> {{ book.name }} <span class="text-muted">{{ book.published }}</span>
             </h2>
-            <h3>{{ book.category.friendly_name }}</h3>
+            <h3>
+                {% if book.category %}
+                <p class="card-body pb-0">
+                    <a class="text-muted" href="{% url 'books' %}?category={{ book.category.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ book.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
+            </h3>
             <h4>{{ book.price }}</h4>
             <p class="lead">{{ book.description }}</p>
         </div>

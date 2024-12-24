@@ -1,3 +1,22 @@
+/*General CSS*/
+.cat-sear{
+  float: right;
+}
+
+.head-push{
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+
 /* Bootstrap Carousel CSS */
 
 body {
