@@ -7,7 +7,7 @@
         <div class="col-md-7">
             <h2 class="featurette-heading"> {{ book.name }} <span class="text-muted">{{ book.published }}</span>
             </h2>
-            <h3>{{ book.category }}</h3>
+            <h3>{{ book.category.friendly_name }}</h3>
             <h4>{{ book.price }}</h4>
             <p class="lead">{{ book.description }}</p>
         </div>
