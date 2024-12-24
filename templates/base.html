@@ -118,8 +118,14 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'books' %}">Books</a>
+                    <li>
+                        <div class="nav-item dropdown" data-toggle="dropdown" aria-labelledby="all-books-link"><a class="nav-link" href="{% url 'books' %}">Books</a>
+                            </div>
+                        <div class="dropdown-menu">
+                            <a href="{% url 'books' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                            <a href="{% url 'books' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                            <a href="{% url 'books' %}?sort=published&direction=desc" class="dropdown-item ">By Date Published</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">About</a>
