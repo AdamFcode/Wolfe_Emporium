@@ -1,113 +1,114 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
 {% endblock %}
 
 {% block content %}
 
-<body class="bg-light">
-    <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="../media/gene_wolfe.webp" alt="" width="100" height="100">
-            <h2>Checkout</h2>
-            <p class="lead">Thank you for shopping with the Wolfe Emporium. Please confirm your order below and enter
-                details for purchasing.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 order-md-2 mb-4">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Your Order</span>
-                    <span class="badge badge-secondary badge-pill">3</span>
-                </h4>
-                <ul class="list-group mb-3">
-                    {% if cart_items %}
-                    <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        {% for item in cart_items %}
-                        <div>
-                            <h6 class="my-0">{{ item.book.name }}</h6>
-                            <h7>ISBN: {{ item.book.sku }}</h7>
-                            <hr>
-                            <img class="d-block mx-auto mb-4" src="{{ item.book.image.url }}" alt="" width="100"
-                                height="100">
-                            <small class="text-muted">{{ item.book.description }}</small>
-                            <br>
-                            <form class="form update-form" method="POST" action="">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <h8>Quantity:</h8>
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0"
-                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                            </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right"><small>Remove</small></a>
-                        </div>
-                        <span class="text-muted">{{ item.book.price }}</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
+<div class="row">
+    <div class="col">
+        {% if cart_items %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
 
-                        {% endfor %}
-                        <span>Delivery: 0</span>
-                        <strong>Total: {{ total|floatformat:2 }}</strong>
-                        {% else %}
-                        <p>No items selected.</p>
-                        <a href="{% url 'books' %}"><span>Return to bookstore</span></a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <div>
-                    <a href="{% url 'books' %}">Continue Shopping?</a>
-                </div>
-                <a href="" class="">
-                    <span>Secure Checkout</span>
-                    <span class="">
-                        <i class=""></i>
-                    </span>
-                </a>
+                    {% for item in cart_items %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.book.image.url }}">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.book.name }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.book.sku|upper }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.book.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}"
+                                                id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <a class="update-link text-info"><small>Update</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.book.price | calc_subtotal:item.quantity }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                
             </div>
+            
+        </div>
+        
+    </div>
+    
 
-            {% endblock %}
+            {% endif %}
+            
+            
+            
+{% endblock %}
 
-            {% block postloadjs %}
-            {{ block.super }}
-            {% include 'books/includes/quantity_input_script.html' %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'books/includes/quantity_input_script.html' %}
 
-            <script type="text/javascript">
-                // Update quantity on click
-                $('.update-link').click(function (e) {
-                    var form = $(this).prev('.update-form');
-                    form.submit();
-                })
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+})
+    
 
-                // Remove item and reload on click
-                $('.remove-item').click(function (e) {
-                    var csrfToken = "{{ csrf_token }}";
-                    var itemId = $(this).attr('id').split('remove_')[1];
-                    var url = `/cart/remove/${itemId}`;
-                    var data = { 'csrfmiddlewaretoken': csrfToken};
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = { 'csrfmiddlewaretoken': csrfToken };
 
-                    $.post(url, data)
-                        .done(function () {
-                            location.reload();
-                        });
-                })
-            </script>
-            {% endblock %}
+        $.post(url, data)
+        .done(function () {
+        location.reload();
+        });
+    })
+ </script>
+{% endblock %}
+
+

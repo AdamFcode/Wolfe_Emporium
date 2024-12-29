@@ -10,15 +10,16 @@ def cart_contents(request):
     book_count = 0
     cart = request.session.get('cart', {})
 
-    for item_id, quantity in cart.items():
-        book = get_object_or_404(Book, pk=item_id)
-        total += quantity * book.price
-        book_count += quantity
-        cart_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'book': book,
-        })
+    for item_id, item_data in cart.items():
+        if isinstance(item_data, int):
+            book = get_object_or_404(Book, pk=item_id)
+            total += item_data * book.price
+            book_count += item_data
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'book': book,
+            })
     
     context = {
         'cart_items': cart_items,
