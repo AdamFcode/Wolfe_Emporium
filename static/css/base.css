@@ -1,4 +1,14 @@
 /*General CSS*/
+ * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 .cat-sear{
   float: right;
 }
@@ -30,7 +40,6 @@ h2 {
 /* Bootstrap Carousel CSS */
 
 body {
-  padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
   height: calc(100vh - 164px);
