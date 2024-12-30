@@ -69,7 +69,31 @@
                                 <p class="my-0">${{ item.book.price | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
+                        
                     {% endfor %}
+                    <tr>
+                            <td>
+                                <h6><strong>Purchases: ${{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: <i>Free!</i></h6>
+                                <h4>Total:<strong>${{ total|floatformat:2 }}</strong></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{% url 'books' %}" class="">
+                                    <span class=>
+                                        <i class=></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href="" class="">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="">
+                                        <i class=""></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
                 
             </div>
             
