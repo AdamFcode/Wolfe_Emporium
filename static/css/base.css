@@ -23,6 +23,10 @@ h2 {
   z-index: 99999999999;
 }
 
+.checkout-img{
+  padding-right: inherit;
+}
+
 /* Bootstrap Carousel CSS */
 
 body {
