@@ -1,0 +1,17 @@
+Hello {{ order.full_name }}!
+
+Thank you for making an order with The Wolfe Emporium. Below is your order details:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+
+Your order has been sent for shipping to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+If you encounter any issues with your order, please contact us at {{ contact_email }} and we will tend to your issue immediately.
+
+Thank you kindly for ordering with us!
+
+With Kind Regards,
+The Wolfe Emporium
