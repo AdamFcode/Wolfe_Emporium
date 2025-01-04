@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Book, Category 
+from .models import Book, Category, Partner
+from .forms import PartnerForm
 from django.db.models.functions import Lower
 
 # Create your views here.
@@ -63,3 +64,12 @@ def book_detail(request, book_id):
     }
 
     return render(request, 'books/book_detail.html', context)
+
+def partner_contact(request):
+    form = PartnerForm()
+    template = 'books/partner_contact.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
