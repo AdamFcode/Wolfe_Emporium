@@ -2,36 +2,56 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div">
-                <hr>
-                <h2>Join us as a Partner!</h2>
-                <h5>Contact us for details:</h5>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-                <form method="POST" action="{% url 'partner_contact' %}" class="form" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <div>
-                        <a href="{% url 'books' %}">Cancel</a>
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>            
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div>
+            <hr>
+            <h2>Join us as a Partner!</h2>
+            <h5>Contact us for details:</h5>
+            <hr>
         </div>
     </div>
+
+    <div class="row">
+        <div>
+            <form method="POST" action="{% url 'partner_contact' %}" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div>
+                    <a href="{% url 'books' %}">Cancel</a>
+                    <button type="button" id="btt-part">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="partyes">
+        <p>Thank you for choosing to partner with us. We will review your details and be in contact soon!</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    const form = document.getElementsByClassName('form');
+    const partyes = document.getElementsByClassName('partyes');
+    
+
+    $('#btt-part').click(function (e) {
+        $('form').hide();
+        $('.partyes').css({ 'display' : 'block' }); 
+    })
+</script>
+
 {% endblock %}
