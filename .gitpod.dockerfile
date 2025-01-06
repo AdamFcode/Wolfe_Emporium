@@ -22,8 +22,9 @@ ENV PYTHON_VERSION 3.12.2
 
 FROM gitpod/workspace-python
 
-RUN pyenv install 3.11 \
-    && pyenv global 3.11
+RUN pyenv install 3.9.21 \
+    && pyenv global 3.9.21 \
+     && pyenv shell 3.9.21
 
 ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
 RUN curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
