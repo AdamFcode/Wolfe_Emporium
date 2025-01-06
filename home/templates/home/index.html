@@ -4,42 +4,45 @@
 {% block content %}
 <main role="main">
     <div class="container marketing top-fit">
-  
+      <div class="welcome">
+        <h1>Welcome to The Wolfe Emporium!</h1>
+        <p>Your one stop shop for all Gene Wolfe books.</p>
+      </div>
       <!-- Three columns of text-->
-      <div class="row">
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      <div class="row hero">
+        <div class="col-lg-4 hero-slice">
+          <img class="bd-placeholder-img rounded-circle" src='/media/spines.webp' width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg>
   
-          <h2>Books</h2>
-          <p>Shop our bookstore</p>
+          <h2>Bookstore</h2>
+          <p>Every major Gene Wolfe publication available at great prices!</p>
           <p><a class="btn btn-secondary" href="{% url 'books' %}">View details »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2>About</h2>
-          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        <div class="col-lg-4 hero-slice">
+          <img class="bd-placeholder-img rounded-circle" src='/media/gene_wolfe.webp' width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg>
+
+          <h2>Mission Satement</h2>
+          <p>Why we love Gene Wolfe, and you should too!</p>
+          <p><a class="btn btn-secondary" href="{% url 'mission' %}">View details »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2>Contact</h2>
-          <p>And lastly this, the third column of representative placeholder content.</p>
-          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        <div class="col-lg-4 hero-slice">
+          <img class="bd-placeholder-img rounded-circle" src='/media/partner-sev.webp' width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg>
+          
+          <h2>Partner</h2>
+          <p>If you're a bookstore looking to upgrade your Wolfe section, contact us here!</p>
+          <p><a class="btn btn-secondary" href="{% url 'partner_contact' %}">View details »</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
   
+      <hr>
   
       <!-- START THE FEATURETTES -->
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          <h2 class="featurette-heading">We offer a set pricing structure <span class="text-muted">With free delivery on all orders!</span></h2>
+          <p class="lead">What better way to spread the joy of Wolfe than with set prices that won't break the bank. Every novel for 7.99! Every Collection for 8.99! Every Omnibus for 9.99! And don't forget, we offer free delivery on all orders!</p>
         </div>
         <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-  
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/media/prices.webp" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg>
         </div>
       </div>
   
@@ -47,11 +50,23 @@
   
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          <h2 class="featurette-heading">We sell new printings of Wolfe's classics. <span class="text-muted">And there's plenty more of where that came from!</span></h2>
+          <p class="lead">We have contracted deals with the Wolfe estate to print his entire bibliography. Order from us and you are guaranteed a new printing; no more second-hand yellowed pages. Enjoy Wolfe as it was meant to be enjoyed; fresh off the presses!</p>
         </div>
         <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/media/condition.webp" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">We aim to promote Gene Wolfe's work <span class="text-muted">And help cement his legacy</span></h2>
+          <p class="lead">Despite a critically acclaimed back catalogue, Gene Wolfe is not considered a household name in either fantasy or sci-fi. We hope to amend that, by promoting some of the greatest literature to ever be penned. See our mission statement for more information.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/media/gene.webp" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg>
   
         </div>
       </div>
