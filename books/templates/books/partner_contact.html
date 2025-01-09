@@ -1,41 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
-<div class="overlay"></div>
 <div class="container">
     <div class="row">
         <div>
             <hr>
-            <h2>Join us as a Partner!</h2>
-            <h5>Contact us for details:</h5>
+            <h1 class="black-text dancing-font">Join us as a Partner!</h1>
+            <p class="black-text">We offer promotional services for both franchised and independant bookstores. This includes book-displays, posters, informational leaflets and in-store competitions. Most importantly, we can provide stock to increase your stash of Gene Wolfe! If you wish to contact us regarding a partnership, please do not hesitate.</p>
+            <hr>
+            <h5 class="black-text turret-font welcome">Contact us for details:</h5>
             <hr>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row welcome">
         <div>
-            <form method="POST" action="{% url 'partner_contact' %}" class="form" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'partner_contact' %}" class="form black-text" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div>
-                    <a href="{% url 'books' %}">Cancel</a>
-                    <button type="button" id="btt-part">Submit</button>
+                    <a class="keep-shop" href="{% url 'books' %}">Cancel</a>
+                    <button type="button" id="btt-part" aria-label="Submit Partner Form">Submit</button>
                 </div>
+                <hr>
             </form>
         </div>
     </div>
 
     <div class="partyes">
-        <p>Thank you for choosing to partner with us. We will review your details and be in contact soon!</p>
+        <p class="black-text welcome">Thank you for choosing to partner with us. We will review your details and be in contact soon!</p>
     </div>
 </div>
 

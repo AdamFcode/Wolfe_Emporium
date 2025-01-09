@@ -4,29 +4,29 @@
 {% block content %}
 <main role="main">
     <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Books</h2>
-                <hr class="w-50 mb-1">
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                    <div class="sort-select-wrapper w-50">
-                        <select id="sort-selector" class=" cat-sear rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                        </select>
-                    </div>
+        <div class="col text-center mt-3">
+            <h1 class="black-text dancing-font">Browse our selection below:</h1>
+            <hr class="w-50 mb-1">
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                <div class="sort-select-wrapper">
+                    <select id="sort-selector" class=" cat-sear rounded-0 border border">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                    </select>
                 </div>
             </div>
+        </div>
     </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-    <div class="container-fluid">
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="container-fluid">
                 <div class="row">
                     {% for book in books %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -35,7 +35,9 @@
                                 <img class="card-img-top img-fluid" src="{{ book.image.url }}" alt="{{ book.name }}">
                             </a>
                             <div class="card-body pb-0">
-                                <p class="mb-0"><strong>{{ book.name }}</strong></p>
+                                <a href="{% url 'book_detail' book.id %}" target="blank">
+                                <p class="mb-0 black-text"><strong>{{ book.name }}</strong></p>
+                            </a>
                             </div>
                             <div>
                                 {% if book.category %}
@@ -49,7 +51,7 @@
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">${{ book.price }}</p>
+                                        <p class="lead mb-0 text-left font-weight-bold black-text">${{ book.price }}</p>
                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{book.published}}</small>
                                     </div>
                                 </div>
@@ -80,13 +82,14 @@
                 </div>
             </div>
         </div>
+    </div>
 
 
         <!-- FOOTER -->
-        <footer class="container btt-btn">
-            <p class="float-right"><a class="btt-btn" href="#">Back to top</a></p>
-            <p>© AdamFcode</p>
-          </footer>
+    <footer class="container btt-btn">
+        <p class="float-right"><a class="btt-btn" href="#">Back to top</a></p>
+        <p>© AdamFcode</p>
+    </footer>
 </main>
 {% endblock %}
 

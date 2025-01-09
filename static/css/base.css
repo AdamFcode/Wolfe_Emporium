@@ -31,8 +31,12 @@ body {
   font-family: 'Dancing Script';
 }
 
-.featurette-sub {
+.black-text {
   color:#000
+}
+
+.white-text {
+  color:#fefde5
 }
 
 .featurette-frame {
@@ -53,6 +57,27 @@ html {
   background-color: #343a40;
 }
 
+.input-center {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mobile-hide {
+  display: none;
+}
+
+.keep-shop {
+  background-color: buttonface;
+    color: buttontext;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
 .partyes {
   display: none; 
 }
@@ -62,6 +87,10 @@ html {
   display: grid;
 }
 
+.text-center {
+  text-align: center
+}
+
 .hero {
   background-image: url('/media/severian-hero.webp');
   background-position: center; 
@@ -69,11 +98,22 @@ html {
   background-size: cover; 
 }
 
+
 .hero-slice {
   background: rgba(0, 0, 0, 0.7);
   color: white;
 }
 
+.top-fit {
+  margin-top: 50px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .mobile-hide {
+    display: flex;
+  }
+}
 /* Stripe CSS */
 .StripeElement,
 .stripe-style-input {
