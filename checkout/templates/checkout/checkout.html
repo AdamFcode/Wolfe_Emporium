@@ -4,38 +4,35 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+    
 {% endblock %}
 
 {% block content %}
 <div class="container">
-<div class="row">
+<div class="row hero-slice top-fit">
     <div class="col-sm">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Your Cart:</span>
+        <span class="white-text dancing-font">Your Cart:</span>
       </h4>
       {% for item in cart_items %}
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <a href="{% url 'book_detail' item.book.id %}" class="checkout-img">
+            <a href="{% url 'book_detail' item.book.id %}" class="checkout-img" aria-label="Book in cart">
                     <img class="w-100"  src="{{ item.book.image.url }}" alt="{{ book.name }}">
             </a>
             <bk>
           <div>
-            <h6 class="my-0">{{ item.book.name }}</h6>
+            <h6 class="my-0 black-text">{{ item.book.name }}</h6>
             <small class="text-muted">{{ item.book.description|truncatechars:75 }}</small>
           </div>
           <div>
-            <span class="text-muted"><strong>Quantity:{{ item.quantity }}</strong></span>
+            <span class="black-text"><strong>Quantity:{{ item.quantity }}</strong></span>
           </div>
-          <span class="text-muted"><strong>{{ item.book.price }}</strong></span>
+          <span class="black-text"><strong>${{ item.book.price }}</strong></span>
         </li>
+        <hr>
         {% endfor %}
-        <li class="list-group-item d-flex justify-content-between">
+        <li class="list-group-item d-flex justify-content-between black-text">
           <span>Total:</span>
           <strong>${{ total | floatformat:2 }}</strong>
         </li>
@@ -51,10 +48,11 @@
                 {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
             </fieldset>
-            <fieldset class="rounded px-3 mb-5">
+            <fieldset class="rounded px-3 mb-5" aria-labelledby="personal details">
                 <legend class="fieldset-label text-black px-2 w-auto">Delivery</legend>
                 {{ order_form.phone_number | as_crispy_field }}
-                {{ order_form.country | as_crispy_field }}
+                <label for="id_country" >{{ order_form.country | as_crispy_field }}
+                Country</label>
                 {{ order_form.postcode | as_crispy_field }}
                 {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.street_address1 | as_crispy_field }}
@@ -65,7 +63,7 @@
                         <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                     {% else %}
-                        <label class="form-check-label" for="id-save-info">
+                        <label class="form-check-label" for="payment-form">
                             <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                             <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
@@ -74,20 +72,20 @@
             </fieldset>
             <fieldset class="px-3">
                 <legend class="fieldset-label text-black px-2">Payment</legend>
-                <div class="mb-3" id="card-element"></div>
+                <div class="mb-3" id="card-element" aria-hidden="true"></div>
                 <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                <input  type="hidden" aria-hidden="true"  value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <div class="submit-button text-right mt-5 mb-2">                    
                 <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
-                    <span class="icon">
+                    <span class="white-text">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="">Change Order</span>
+                    <span class="keep-shop ordbtn">Change Order</span>
                 </a>
                 <button id="submit-button" class="btn btn-black rounded-0">
-                    <span class="">Complete Order</span>
-                    <span class="icon">
+                    <span class="keep-shop ordbtn">Complete Order</span>
+                    <span class="white-text">
                         <i class="fas fa-lock"></i>
                     </span>
                 </button>

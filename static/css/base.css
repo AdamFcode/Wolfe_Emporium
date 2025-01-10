@@ -89,6 +89,11 @@ html {
   color: #000;
 }
 
+.ordbtn:hover {
+  background-color:green;
+  color: #000;
+}
+
 .partyes {
   display: none; 
 }
