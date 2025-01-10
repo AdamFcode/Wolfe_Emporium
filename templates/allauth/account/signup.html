@@ -5,11 +5,11 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<h1 class="black-text top-fit">{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="black-text">{% blocktrans %}Already have an account? Then please <a class="white-text" href="{{ login_url }}">SIGN IN</a>.{% endblocktrans %}</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form class="signup welcome black-text" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}
@@ -17,5 +17,10 @@
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
+
+<footer class="container btt-btn top-fit">
+  <p class="float-right"><a class="btt-btn" href="#">Back to top</a></p>
+  <p>© AdamFcode</p>
+</footer>
 
 {% endblock %}

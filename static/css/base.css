@@ -79,6 +79,10 @@ html {
   cursor: pointer;
 }
 
+.acc-btn {
+  cursor: pointer;
+}
+
 .remove-item:hover {
   background-color: red;
   color: #000;
