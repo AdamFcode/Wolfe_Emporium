@@ -24,23 +24,25 @@
                 {% for item in cart_items %}
                 <tr>
                     <td class="p-3 w-25">
-                        <img class="img-fluid rounded" src="{{ item.book.image.url }}">
+                        <img class="img-fluid rounded" src="{{ item.book.image.url }}" alt="{{ item.book.name }}">
                     </td>
                     <td class="py-3">
                         <p class="my-0"><strong>{{ item.book.name }}</strong></p>
-                        <p class="my-0 small text-muted">SKU: {{ item.book.sku|upper }}</p>
+                        <p class="my-0 small">ISBN: {{ item.book.sku|upper }}</p>
                     </td>
                     <td class="py-3">
                         <p class="my-0">${{ item.book.price }}</p>
                     </td>
                     <td class="py-3 w-25">
-                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                        <form class="form update-form" method="POST" id="form" action="{% url 'adjust_cart' item.item_id %}">
                             {% csrf_token %}
-                            <div class="form-group">
+                            <label for="id_qty_{{ item.item_id }}">
+                                <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-sm btn-black rounded-0"
-                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}"
+                                            aria-label="Decrease Quantity">
                                             <span>
                                                 <i class="fas fa-minus fa-sm"></i>
                                             </span>
@@ -51,18 +53,19 @@
                                         id="id_qty_{{ item.item_id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}"
+                                            aria-label="Increase Quantity">
                                             <span>
                                                 <i class="fas fa-plus fa-sm"></i>
                                             </span>
                                         </button>
                                     </div>
                                 </div>
+                            </label>
                             </div>
                         </form>
-                        <a class="update-link text-info"><small>Update</small></a>
-                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                            data-product_size="{{ item.size }}"><small>Remove</small></a>
+                        <a class="update-link keep-shop"><small>Update</small></a>
+                        <a class="remove-item float-right keep-shop" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                     </td>
                     <td class="py-3">
                         <p class="my-0">${{ item.book.price | calc_subtotal:item.quantity }}</p>
@@ -71,7 +74,7 @@
 
                 {% endfor %}
                 <tr>
-                    <td>
+                    <td colspan="5" class="text-right">
                         <h6><strong>Purchases: ${{ total|floatformat:2 }}</strong></h6>
                         <h6>Delivery: <i>Free!</i></h6>
                         <h4>Total:<strong>${{ total|floatformat:2 }}</strong></h4>
@@ -83,10 +86,10 @@
                             <span class=>
                                 <i class=></i>
                             </span>
-                            <span class="text-uppercase">Keep Shopping</span>
+                            <span class="text-uppercase keep-shop">Keep Shopping</span>
                         </a>
                         <a href="{% url 'checkout' %}" class="">
-                            <span class="text-uppercase">Secure Checkout</span>
+                            <span class="text-uppercase keep-shop">Secure Checkout</span>
                             <span class="">
                                 <i class=""></i>
                             </span>
@@ -114,9 +117,9 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function (e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
+   $('.update-link').click(function (e) {
+       var form = document.getElementsByClassName('.update-form');
+       $('form').submit();
     })
 
 

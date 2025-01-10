@@ -34,6 +34,10 @@ def adjust_cart(request, item_id):
     if quantity > 0:
         cart[item_id] = quantity
         messages.success(request, f'Updated {book.name} quantity to {cart[item_id]}')
+    else:
+        cart.pop(item_id)
+        messages.success(request, f'Removed {book.name} from your cart')
+
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))

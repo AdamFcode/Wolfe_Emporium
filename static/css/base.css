@@ -70,12 +70,23 @@ html {
 
 .keep-shop {
   background-color: buttonface;
-    color: buttontext;
-    padding-block: 1px;
-    padding-inline: 6px;
-    border-width: 2px;
-    border-color: buttonborder;
-    border-image: initial;
+  color: buttontext;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  border-color: buttonborder;
+  border-image: initial;
+  cursor: pointer;
+}
+
+.remove-item:hover {
+  background-color: red;
+  color: #000;
+}
+
+.update-link:hover {
+  background-color:green;
+  color: #000;
 }
 
 .partyes {
