@@ -1,0 +1,1 @@
+web: gunicorn wolfe_emporium.wsgi:application
