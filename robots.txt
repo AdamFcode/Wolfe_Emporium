@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://the-wolfe-emporium-bde6dff49b20.herokuapp.com/sitemap.xml
