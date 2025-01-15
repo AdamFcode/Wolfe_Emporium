@@ -4,9 +4,11 @@ from books.models import Book
 
 # Create your views here.
 
+
 def view_cart(request):
 
     return render(request, 'cart/cart.html')
+
 
 def add_to_cart(request, item_id):
 
@@ -17,30 +19,34 @@ def add_to_cart(request, item_id):
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
-        messages.success(request, f'Updated {book.name} quantity to {cart[item_id]}')
+        messages.success(request,
+                         f'Updated {book.name} quantity to {cart[item_id]}')
     else:
         cart[item_id] = quantity
-        messages.success(request, f'Successfully added {book.name} to your cart')
+        messages.success(request,
+                         f'Successfully added {book.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
 
 def adjust_cart(request, item_id):
 
     book = get_object_or_404(Book, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
-    
+
     if quantity > 0:
         cart[item_id] = quantity
-        messages.success(request, f'Updated {book.name} quantity to {cart[item_id]}')
+        messages.success(request,
+                         f'Updated {book.name} quantity to {cart[item_id]}')
     else:
         cart.pop(item_id)
         messages.success(request, f'Removed {book.name} from your cart')
 
-
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+
 
 def remove_from_cart(request, item_id):
     book = get_object_or_404(Book, pk=item_id)

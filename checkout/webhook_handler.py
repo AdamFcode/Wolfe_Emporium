@@ -8,7 +8,7 @@ from profiles.models import UserProfile
 
 import stripe
 import json
-import time 
+import time
 
 
 class StripeWH_Handler:
@@ -24,13 +24,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )
 
     def handle_event(self, event):
         return HttpResponse(
@@ -43,11 +43,9 @@ class StripeWH_Handler:
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        stripe_charge = stripe.Charge.retrieve(
-        intent.latest_charge
-        )
+        stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
 
-        billing_details = stripe_charge.billing_details 
+        billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
         total = round(stripe_charge.amount / 100, 2)
 
@@ -68,7 +66,7 @@ class StripeWH_Handler:
                 profile.default_street_address2 = shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
-        
+
         order_exists = False
         attempt = 1
         while attempt <= 5:

@@ -7,10 +7,11 @@ from django.db.models.functions import Lower
 
 # Create your views here.
 
+
 def all_books(request):
 
     books = Book.objects.all()
-    categories = None 
+    categories = None
     query = None
     sort = None
     direction = None
@@ -40,12 +41,12 @@ def all_books(request):
             if not query:
                 messages.error(request, "Your search did not return anything!")
                 return redirect(reverse('books'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(published__icontains=query)
+
+            queries = Q(name__icontains=query) | Q(description__icontains=
+            query) | Q(published__icontains=query)
             books = books.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
 
     context = {
         'books': books,
@@ -54,6 +55,7 @@ def all_books(request):
         'current_categories': categories,
     }
     return render(request, 'books/books.html', context)
+
 
 def book_detail(request, book_id):
 
@@ -64,6 +66,7 @@ def book_detail(request, book_id):
     }
 
     return render(request, 'books/book_detail.html', context)
+
 
 def partner_contact(request):
     form = PartnerForm()
