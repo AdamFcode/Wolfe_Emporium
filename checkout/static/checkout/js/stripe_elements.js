@@ -20,7 +20,7 @@ var style = {
   invalid: {
     iconColor: '#FFC7EE',
     color: '#FFC7EE',
-  },}
+  },};
   
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
@@ -109,5 +109,5 @@ form.addEventListener('submit', function(ev) {
         });
     }).fail(function () {
         location.reload();
-    })
+    });
 });
