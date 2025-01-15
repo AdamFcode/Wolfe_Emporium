@@ -7,7 +7,7 @@
         <div class="col-md-7">
             <h2 class="featurette-heading black-text text-center"> {{ book.name }} <span class="black-text">{{ book.published }}</span>
             </h2>
-            <h3>
+            
                 {% if book.category %}
                 <p class="card-body pb-0">
                     <a class="black-text" href="{% url 'books' %}?category={{ book.category.name }}">
@@ -15,10 +15,10 @@
                     </a>
                 </p>
                 {% endif %}
-            </h3>
-            <h4 class="black-text hero-slice text-center">
-                <p class="lead">{{ book.description }}</p>
-            </h4>
+            
+            
+                <p class="lead black-text hero-slice text-center">{{ book.description }}</p>
+            
             <h4 class="black-text text-center">${{ book.price }}</h4>
 
             <form class="form text-center" action="{% url 'add_to_cart' book.id %}" method="POST">
@@ -75,6 +75,7 @@
         </div>
     </div>
     <hr>
+</div>
 
    <!-- FOOTER -->
     <footer class="container btt-btn">
@@ -84,7 +85,6 @@
         <p class="float-right"><a class="btt-btn" href="#">Back to top</a></p>
         <p>© AdamFcode</p>
     </footer>
-</main>
 {% endblock %}
 
 {% block postloadjs %}
