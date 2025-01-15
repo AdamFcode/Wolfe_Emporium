@@ -7,7 +7,7 @@
 
     {% block meta %}
     <!--Meta's loaded in block-->
-    <meta http-equiv="X - UA - compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A reasonably priced bookstore dedicated to award-winning fantasy and sci-fi author Gene Wolfe, offering free delivery and partnership opportunities for booksellers.">
@@ -89,7 +89,7 @@
                                 <p class="my-0 nav-white acc-btn">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-label="user-options">
+                        <div class="dropdown-menu border-0" aria-label="dropdown-item">
                             {% if request.user.is_authenticated %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
