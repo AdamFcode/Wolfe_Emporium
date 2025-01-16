@@ -12,6 +12,7 @@ The Wolfe Emporium aims to fix that by reprinting Wolfe's bibliography and provi
 ## User Stories
 -As a user I want to
   - Easily and intuitively navigate the site
+  - Use the search bar to locate books
   - Browse the selection and inspect for further details
   - Add, edit and remove books within my cart
   - Place an order
@@ -163,11 +164,15 @@ A payment element under the details form, provided by stripe, allows the user to
 
 ![Payment](media/user_payment.jpg)
 
+**NOTE**: In the early hours of the day of project submission, the sprawling issue documented under bugs below returned and caused the stripe functionality of the project to malfunction. After several hours of torubleshooting it was decided to finish this section of the user workflow using older screenshots. This was decided upon to ensure that there was content available in the readme as the deadline was a few hours away and tutor support was outside of operating hours. Worried that by the time the issue was solved it would be too late to add to the readme, the difficult decision was made to proceed in this fashion to deter missing the project deadline.
 
+Once the user has clicked on secure payment, they will be redirected to a page documenting the contents of their order and displaying a toast to keep the user informed, whether to tell them that a confirmation email has been sent or, in the case of visiting a past order page, that the confirmation email had already been sent at the time of the original purchase.
 
+![Order Recap](media/user_order_recap.jpg)
 
+If a registered user wishes to review all their past orders, they can access their profile from the account drop-down in the navbar. Once they navigate to this page, they can either update their personal details or review their past orders in a table. The order number on this table can be clicked to bring the user to the specific instance of that order, as detailed in the step above
 
-
+![Order History](media/user_order_history.jpg)
 
 # Testing
 ## User Stories
@@ -177,6 +182,11 @@ As a user I want to easily and intuitively navigate the site
   - The carousel provides buttons that lead to the main areas of the website.
   - Buttons across the site lead to their intended destination
 <hr>
+
+As a user I want to use the search bar to locate books
+
+  - The search bar allows the input of queries, searching through titles and categories to locate a match.
+  - Upon entering a search term, the page redirects to the bookstore page with the relevant items displayed.
 
 As a user I want to browse the selection and inspect for further details
   
@@ -201,7 +211,7 @@ As a user I want to safely register an account to track orders
 
   - The navbar menu provided a portal for the user to register an account
   - The registration is protected by email verification
-  - Once registered, the user has access to a profile which trackstheir orders and provides details for each at a click
+  - Once registered, the user has access to a profile which tracks their orders and provides details for each at a click
 <hr>
 
 As a user I want to save my details for future orders
