@@ -1,131 +1,152 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Wolfe Emporium
+The Wolfe Emporium is an online bookstore dedicated to acclaimed fantasy and sci-fi writer Gene Wolfe
 
-Welcome Adam Feehely,
+Despite a decades-spanning career and several impressive achievements, the works of Gene Wolfe rarely receive reprints, leaving fans to either search out second-hand copies of his work or buy them digitally, which is not ideal for many collectors. Due to their quasi-rarity, editions in good condition can be resold at prices far higher than the standard second-hand book.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The Wolfe Emporium aims to fix that by reprinting Wolfe's bibliography and providing them to the public at very reasonable, set prices. The aim is to also provide promotional materials and stock to any interested booksellers in order to futher foster interest in his masterful works.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+![Homepage](media/readme_header.jpg)
+[Live Deployment](https://the-wolfe-emporium-bde6dff49b20.herokuapp.com/)
 
-## Gitpod Reminders
+# Design & Planning
+## User Stories
+-As a user I want to
+  - Easily and intuitively navigate the site
+  - Browse the selection and inspect for further details
+  - Add books to cart
+  - Place an order
+  - Register an account to track orders
+  - Save my details for future orders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The above will be addressed under Testing below
 
-`python3 -m http.server`
+## Wireframes
+The wireframes for this website were designed using Figma and were mostly adhered to throughout. 
 
-A blue button should appear to click: _Make Public_,
+The following bootstrap themes served as a customised basis in places to allow further attention to be placed on the code:
+  - The Carousel theme was used for the Home Page
+  - The Static Navbar theme was used for the Nav Bar
+  - The Checkout theme was used for the Checkout page
 
-Another blue button should appear to click: _Open Browser_.
+### Wireframes For Home
+![Wireframe Home](media/wf_home.jpg)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### Wireframes For Book Store
+![Wireframe Bookstore](media/wf_books.jpg)
 
-A blue button should appear to click: _Make Public_,
+### Wireframes for Book Details
+![Wirefram Book Detail](media/wf_detail.jpg)
 
-Another blue button should appear to click: _Open Browser_.
+## Agile Methodology
+This website was designed using an Agile Methodology. Features for this project were planned ahead of time and tracked using a Kanban Board which was hosted on the programmers Github profile.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+This can be seen [here](https://github.com/users/AdamFcode/projects/3/views/1)
 
-To log into the Heroku toolbelt CLI:
+## Typography
+Turret Road and Dancing Script were the two fonts selected for headings throughout, with the standard font used for paragraphs. The two chosen fonts were selected for their aesthetic connections to the fantasy and sci-fi genre. Not only was Gene Wolfe lauded in both genres, he was also known for blending the two or misleading readers to believe the current work they were reading was situated in one genre whilst in fact being the other on closer inspection.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Colour Scheme
+The colour scheme was selected following a discussion with a artist familiar with Gene Wolfe's work. The darker tone of the navbar and footer is seperated by a soft blue. Initially, white was selected for the text in the body, similar to the navbar, but it caused issues with readability. As such, black was chosen as it stood out starkly against the blue.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Colour Palette
+![Coolors](media/coolors.jpg)
 
-### Connecting your Mongo database
+## Database Schema
+![Database Diagram](media/db_schema.jpg)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+# Technologies Used
+![Technologies](media/requirements.jpg)
 
-------
+# Features
+## Navbar
+The top of the website has a navbar providing links to the various pages of the store. It also hosts an account drop-down menu and access to the user's cart. A search bar allows the user to search for specific titles or categories and a banner informs the user that all orders have free delivery. Free Delivery was decided upon based on the massive popularity of the now defunct bookstore, bookdepository.com, which was a great source of Gene Wolfe novels and often edged out the competitions total price due to free delivery alone.
 
-## Release History
+![Nav Bar](media/guest_hero.jpg)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Carousel
+A carousel at the top of the homepage offers three segments, each with a brief description of a specific page on the site and a button to access the same. They are also accompanied by a relevant image.
 
-**June 18, 2024,** Add Mongo back into template
+![Carousel](media/guest_carousel.jpg)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## Featurettes
+The homepage also features three featurette's, eachdiscussing a specific aspect of the website; the price plan, the fresh printing of the Wolfe bibliography and a commitment to upholding the legacy of Gene Wolfe. each of these featurettes is accompanied by a relevant image.
 
-**May 28 2024:** Fix Mongo and Links installs
+![Featurettes](media/guest_featurette.jpg)
 
-**April 26 2024:** Update node version to 16
+## Newsletter
+The footer on the homepage hosts a newsletter signup form provided by mailchimp. The form only exists inthe footer on the homepage as it is the largets element of the footer and felt like aggresive marketing if hosted at the bottom of every page.
 
-**September 20 2023:** Update Python version to 3.9.17.
+![Newsletter](media/guest_newsletter.jpg)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Footer
+The standard footer for the website contains a simple copyright statement for the programmer, a link to the website's facebook page and a link to bring the user back to the top of the current page.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Footer](media/guest_footer.jpg)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Bookstore
+The page for books displays them as cards, aligned four horizontally on desktop and stacked singularly on mobile. The card contains the book's image, it's name, date of publication, price and category. The user can sort the results with a dropdown menu above the bookstore and can click on either the image or the book name to see further details.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Bookstore](media/guest_books.jpg)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Book Detail
+Clicking into a book provides the same information as above, along with a description of the book's content. On mobile, the book image is hidden as it necessitated the user scrolling to receive all the pertinent information. Here the user can also select a quantity and add it to their cart if they wish.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Book Detail](media/guest_details.jpg)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Partner Contact Form
+The partner contact form, accessible from both the navbar and the carousel, provides interested booksellers with a form which gathers basic information about their business. This is hypotethically to form a partnerhsip where The Wolfe Emporium would provide stock and promotional materials to interested booksellers in order to increase awareness in Gene Wolfe's work. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Partner Contact](media/guest_partner.jpg)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Mission Statement
+The mission statement page, accessible from both the navbar and the carousel, contains three seperate chunks of content, each headed with a quote from Gene Wolfe's texts and a relevant image. This page provides information on Gene Wolfe himself as well as the intents of The Wolfe Emporium.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![About](media/guest_about.jpg)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# New User Workflow
+## Registration
+A user who wishes to register for the website would do so through the account menu in the navbar.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Account](media/user_dropdown.jpg)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Once on the registration page, the user will be asked to provide some basic details.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Register](media/user_register.jpg)
 
-------
+Following registration a confirmaton email will be sent to the user's account. A toast at the bottom of the screen will also appear.
 
-## FAQ about the uptime script
+![Verify](media/user_verify.jpg)
 
-**Why have you added this script?**
+An email sent to the user provides a link to activate their account. This ensures a rudimentary protection against bots making sham accounts, though further precautions would be ideal.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Verify Email](media/user_verify_email.jpg)
 
-**How will this affect me?**
+Once the link in the email has been clicked, the user will be rerouted to a page to confirm their successful registration by pressing a button. On doing so, they receive an informative toast.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Register Success](media/user_verify_confirm.jpg)
+![Register Toast](media/user_verify_toast.jpg)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+The user will then be asked to login using their registered details. Once logged in, a toast will greet them once again.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Login](media/user_login.jpg)
+![Login Success](media/user_login_success.jpg)
 
-**So….?**
+When a user adds a book from the bookstore to their cart, they receive a toast to inform them of the change. With books in their cart, they can now access it from either the navbar or from a button on the book details page. The cart hosts the selected books with a summary total for the order.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![Add to Cart](media/user_addcart.jpg)
 
-**Can I opt out?**
+![Cart](media/user_cart.jpg)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Within the cart, the user has access to an update and a remove button, with which they can control the quantities and items they wish to purchase. Any usage of these buttons is accompanied by a toast to keep the user updated on any changes to their cart.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![Remove](media/user_remove.jpg)
+![Update](media/user_update.jpg)
 
-**Anything more?**
+Once the secure checkout button in cart is clicked, the user is brought to the checkout page, which contains a summary of their cart and provides a form for them to fill out their personal details, such as name, address and number.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![Order](media/user_order.jpg)
 
----
+A payment element under the details form, provided by stripe, allows the user to enter their card details and proceed with their purchase. Incorrect data entry or any processing errors will be made clear to the user.
 
-Happy coding!
+![Payment](media/user_payment.jpg)
+
