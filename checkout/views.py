@@ -67,7 +67,7 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                except Product.DoesNotExist:
+                except Book.DoesNotExist:
                     messages.error(request, (
                         "One of the books in your cart wasn't in our database."
                         "Please call us for assistance!")
