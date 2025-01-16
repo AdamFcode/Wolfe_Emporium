@@ -164,11 +164,17 @@ A payment element under the details form, provided by stripe, allows the user to
 
 ![Payment](media/user_payment.jpg)
 
-**NOTE**: In the early hours of the day of project submission, the sprawling issue documented under bugs below returned and caused the stripe functionality of the project to malfunction. After several hours of torubleshooting it was decided to finish this section of the user workflow using older screenshots. This was decided upon to ensure that there was content available in the readme as the deadline was a few hours away and tutor support was outside of operating hours. Worried that by the time the issue was solved it would be too late to add to the readme, the difficult decision was made to proceed in this fashion to deter missing the project deadline.
-
 Once the user has clicked on secure payment, they will be redirected to a page documenting the contents of their order and displaying a toast to keep the user informed, whether to tell them that a confirmation email has been sent or, in the case of visiting a past order page, that the confirmation email had already been sent at the time of the original purchase.
 
 ![Order Recap](media/user_order_recap.jpg)
+
+Stripe webhook event deliveries are fully operational
+
+![ Webhook](media/stripe_notify.jpg)
+
+Having placed a successful order, the user receives a confirmation email as can be seen in our temporary email address below
+
+![Email Confirm](media/email_order.jpg)
 
 If a registered user wishes to review all their past orders, they can access their profile from the account drop-down in the navbar. Once they navigate to this page, they can either update their personal details or review their past orders in a table. The order number on this table can be clicked to bring the user to the specific instance of that order, as detailed in the step above
 
