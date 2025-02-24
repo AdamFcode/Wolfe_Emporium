@@ -31,11 +31,11 @@
                     {% for book in books %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
-                            <a href="{% url 'book_detail' book.id %}" target="blank">
+                            <a href="{% url 'book_detail' book.id %}">
                                 <img class="card-img-top img-fluid" src="{{ book.image.url }}" alt="{{ book.name }}">
                             </a>
                             <div class="card-body pb-0">
-                                <a href="{% url 'book_detail' book.id %}" target="blank">
+                                <a href="{% url 'book_detail' book.id %}">
                                 <p class="mb-0 black-text"><strong>{{ book.name }}</strong></p>
                             </a>
                             </div>

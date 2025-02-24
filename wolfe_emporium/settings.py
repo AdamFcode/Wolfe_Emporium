@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-adamfcode-wolfeemporium-s7cq0cf8o4t.ws.codeinstitute-ide.net',
+    '8000-adamfcode-wolfeemporium-336ddsvc6qw.ws-eu117.gitpod.io',
     'the-wolfe-emporium-bde6dff49b20.herokuapp.com'
 ]
 
@@ -68,7 +68,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-adamfcode-wolfeemporium-s7cq0cf8o4t.ws.codeinstitute-ide.net'
+    'https://8000-adamfcode-wolfeemporium-336ddsvc6qw.ws-eu117.gitpod.io'
 ]
 
 ROOT_URLCONF = 'wolfe_emporium.urls'
