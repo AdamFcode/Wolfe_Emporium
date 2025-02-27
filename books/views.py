@@ -69,10 +69,17 @@ def book_detail(request, book_id):
 
 
 def partner_contact(request):
-    form = PartnerForm()
-    template = 'books/partner_contact.html'
-    context = {
-        'form': form,
-    }
+    if request.method == 'POST':
+        form = PartnerForm(request.POST)
+        
+        if form.is_valid():
+            messages.success(request, 'Your form was successfully submitted!')
+            return render(request, 'books/partner_contact.html', {'form': form})
+        else:
+            messages.error(request, 'There was an error with your form. Please double check your information.')
+            print(form.errors)  
+        
+    else:
+        form = PartnerForm()
 
-    return render(request, template, context)
+    return render(request, 'books/partner_contact.html', {'form': form})

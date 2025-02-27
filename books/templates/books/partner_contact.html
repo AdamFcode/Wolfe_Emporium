@@ -3,56 +3,72 @@
 
 {% block content %}
 <div class="container">
+    <!-- Display any success or error messages from Django messages framework -->
+    <div>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
     <div class="row">
         <div>
             <hr>
             <h1 class="black-text dancing-font">Join us as a Partner!</h1>
-            <p class="black-text">We offer promotional services for both franchised and independant bookstores. This includes book-displays, posters, informational leaflets and in-store competitions. Most importantly, we can provide stock to increase your stash of Gene Wolfe! If you wish to contact us regarding a partnership, please do not hesitate.</p>
+            <p class="black-text">
+                We offer promotional services for both franchised and independent bookstores. This includes book-displays, posters, informational leaflets, and in-store competitions. Most importantly, we can provide stock to increase your stash of Gene Wolfe! If you wish to contact us regarding a partnership, please do not hesitate.
+            </p>
             <hr>
             <h5 class="black-text turret-font welcome">Contact us for details:</h5>
             <hr>
         </div>
     </div>
 
-    <div class="row welcome">
-        <div>
-            <form method="POST" action="{% url 'partner_contact' %}" class="form black-text" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form | crispy }}
-                <div>
-                    <a class="keep-shop" href="{% url 'books' %}">Cancel</a>
-                    <button type="button" id="btt-part" aria-label="Submit Partner Form">Submit</button>
-                </div>
-                <hr>
-            </form>
+    <!-- Only show form if the form has not been submitted successfully -->
+    {% if not form.is_bound or not form.is_valid %}
+        <div class="row welcome">
+            <div>
+                <!-- Form to collect partner information -->
+                <form id="partnerForm" method="POST" action="{% url 'partner_contact' %}" class="form black-text" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div>
+                        <a class="keep-shop" href="{% url 'books' %}">Cancel</a>
+                        <button type="submit" id="btt-part" aria-label="Submit Partner Form">Submit</button>
+                    </div>
+                    <hr>
+                </form>
+            </div>
         </div>
-    </div>
+    {% else %}
+        <!-- Success message section -->
+        <div class="partyes">
+            <p class="black-text welcome">Thank you for choosing to partner with us. We will review your details and be in contact soon!</p>
+        </div>
+    {% endif %}
 
-    <div class="partyes">
-        <p class="black-text welcome">Thank you for choosing to partner with us. We will review your details and be in contact soon!</p>
-    </div>
 </div>
 
-<footer class="container btt-btn">
-    <a href="https://www.facebook.com/profile.php?id=61571933733644" rel="external" target="_blank" aria-label="opens facebook page in new tab">
-        <i class="fa-brands fa-facebook" aria-hidden="true">Join us on Facebook</i>
-    </a>
-    <p class="float-right"><a class="btt-btn" href="#">Back to top</a></p>
-    <p>© AdamFcode</p>
-  </footer>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 
 <script>
-    const form = document.getElementsByClassName('form');
-    const partyes = document.getElementsByClassName('partyes');
-    
+    // Prevent form submission if there are validation errors
+    document.getElementById('partnerForm').addEventListener('submit', function(event) {
+        var form = this;
 
-    $('#btt-part').click(function (e) {
-        $('form').hide();
-        $('.partyes').css({ 'display' : 'block' }); 
+        // Check if the form is valid before submitting
+        if (!form.checkValidity()) {
+            event.preventDefault();  // Prevent form submission
+            alert("Please fill out all required fields correctly.");
+        }
     });
 </script>
 
