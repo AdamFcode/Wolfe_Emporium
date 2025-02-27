@@ -60,16 +60,20 @@
 {{ block.super }}
 
 <script>
-    // Prevent form submission if there are validation errors
-    document.getElementById('partnerForm').addEventListener('submit', function(event) {
-        var form = this;
+    document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('partnerForm');
+    
+    // Check if the form exists to avoid the 'null' error
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();  // Prevent form submission
+                alert("Please fill out all required fields correctly.");
+            }
+        });
+    }
+});
 
-        // Check if the form is valid before submitting
-        if (!form.checkValidity()) {
-            event.preventDefault();  // Prevent form submission
-            alert("Please fill out all required fields correctly.");
-        }
-    });
 </script>
 
 {% endblock %}
