@@ -5,15 +5,17 @@ from .models import Book, Category
 # Register your models here.
 class BookAdmin(admin.ModelAdmin):
     list_display = (
-        'sku',
+        'isbn',
         'name',
+        'author',
         'published',
         'category',
         'price',
+        'rating',
         'image',
     )
 
-    ordering = ('sku',)
+    ordering = ('isbn',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
