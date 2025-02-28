@@ -37,6 +37,8 @@
                             <div class="card-body pb-0">
                                 <a href="{% url 'book_detail' book.id %}">
                                 <p class="mb-0 black-text"><strong>{{ book.name }}</strong></p>
+                                <p class="mb-0 black-text">{{ book.author }}</p>
+                                <small class="text-muted">Genre: <strong>{{book.genre}}</strong></small>
                             </a>
                             </div>
                             <div>
@@ -47,12 +49,19 @@
                                     </a>
                                 </p>
                                 {% endif %}
+                                {% if book.series %}
+                                <p class="card-body pb-0">Series: <strong>{{ book.series }}</strong></p>
+                                {% endif %}
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold black-text">${{ book.price }}</p>
                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{book.published}}</small>
+                                        <br>
+                                        <small class="text-muted">Page Count: <strong>{{book.pages}}</strong></small>
+                                        <br>
+                                        <small class="text-muted">Rating: <strong>{{book.rating}}</strong></small>
                                     </div>
                                 </div>
                             </div>
