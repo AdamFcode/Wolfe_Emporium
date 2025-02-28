@@ -7,7 +7,16 @@
         <div class="col-md-7">
             <h2 class="featurette-heading black-text text-center"> {{ book.name }} <span class="black-text">{{ book.published }}</span>
             </h2>
-            
+            <h3 class="featurette-heading black-text text-center"> {{ book.author }}</span>
+            </h3>
+
+                {% if book.series %}
+                <p class="card-body pb-0 text-center">Series: {{ book.series }}</p>
+                {% endif %}
+
+                <p class="card-body pb-0 text-center">Genre: {{book.genre}}</p>
+                <p class="card-body pb-0 text-center">Page Count: {{book.pages}}</p>
+
                 {% if book.category %}
                 <p class="card-body pb-0">
                     <a class="black-text" href="{% url 'books' %}?category={{ book.category.name }}">
@@ -18,6 +27,7 @@
             
             
                 <p class="lead black-text hero-slice text-center">{{ book.description }}</p>
+                <p class="card-body pb-0 text-center">Rating: {{book.rating}}</p>
             
             <h4 class="black-text text-center">${{ book.price }}</h4>
 
