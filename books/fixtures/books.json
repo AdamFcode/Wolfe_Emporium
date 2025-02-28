@@ -3,416 +3,576 @@
        "pk":1,
        "model":"books.book",
        "fields":{
-          "sku":"9780765321343",
+          "isbn":"9780765321343",
           "name":"An Evil Guest",
           "published":"2008",
           "description":"Set a hundred years in the future, An Evil Guest is a story of an actress who becomes the lover of both a mysterious sorcerer and private detective, and an even more mysterious and powerful rich man, who has been to the human colony on an alien planet and learned strange things there.",
           "price":7.99,
           "category":1,
-          "image":"an_evil_guest.webp"
+          "image":"an_evil_guest.webp",
+          "author":"Gene Wolfe",
+          "series":null,
+          "pages":304,
+          "genre":"Fantasy",
+          "rating":3.1
        }
     },
     {
         "pk":2,
         "model":"books.book",
         "fields":{
-           "sku":"9780765381156",
+           "isbn":"9780765381156",
            "name":"A Borrowed Man",
            "published":"2015",
            "description":"In the 22nd century, Ern A. Smithe is a reclone of a mystery writer, embedded with the recorded memories of his original and stored in a library where patrons can consult or borrow him. He is checked out by a woman who hopes that he can help solve the deaths of her father and brother, because her father's safe had contained nothing except one of Smithe's novels.",
            "price":7.99,
            "category":1,
-           "image":"borrowed_man.webp"
+           "image":"borrowed_man.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":300,
+           "genre":"Science Fiction",
+           "rating":3.38
         }
      },
      {
         "pk":3,
         "model":"books.book",
         "fields":{
-           "sku":"9780312863043",
+           "isbn":"9780312863043",
            "name":"Castleview",
            "published":"1990",
            "description":"Castleview, an Illinois town, has a phantom castle that Will Shields sees on his first night there, an experience that involves him in murder and mysterious, life-threatening events, because the castle belongs to Morgan Le Fay",
            "price":7.99,
            "category":1,
-           "image":"castleview.webp"
+           "image":"castleview.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":278,
+           "genre":"Fantasy",
+           "rating":3.32
         }
      },
      {
         "pk":4,
         "model":"books.book",
         "fields":{
-           "sku":"9780312868369",
+           "isbn":"9780312868369",
            "name":"Free Live Free",
            "published":"1984",
            "description":"Mr. Free has a house which is slated for demolition. He puts an ad in a newspaper advertising free living quarters to anyone who helps him find a mysterious lost object hidden in the house. Four strangers (a mystic, a private eye, a prostitute, and a salesman) arrive.",
            "price":7.99,
            "category":1,
-           "image":"free_live_free.webp"
+           "image":"free_live_free.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":416,
+           "genre":"Science Fiction",
+           "rating":3.51
         }
      },
      {
         "pk":5,
         "model":"books.book",
         "fields":{
-           "sku":"9780765328199",
+           "isbn":"9780765328199",
            "name":"Home Fires",
            "published":"2011",
            "description":"Marrying after college only to be separated by Chelle’s tour of duty in a war against aliens from distant solar systems, Chelle and Skip find their relationship further complicated by time differentials that cause an injured and war-weary Chelle to age only a few months while Skip reaches his 40s.",
            "price":7.99,
            "category":1,
-           "image":"home_fires.webp"
+           "image":"home_fires.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":304,
+           "genre":"Science Fiction",
+           "rating":3.25
         }
      },
      {
         "pk":6,
         "model":"books.book",
         "fields":{
-           "sku":"9780765335968",
+           "isbn":"9780765335968",
            "name":"The Land Across",
            "published":"2013",
            "description":"Grafton is a travel writer who decides to write the first ever travel guide to the land beyond the mountains, an otherwise-unnamed Eastern European nation that is almost impossible to reach.",
            "price":7.99,
            "category":1,
-           "image":"land_across.webp"
+           "image":"land_across.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":288,
+           "genre":"Fantasy",
+           "rating":3.45
         }
      },
      {
         "pk":7,
         "model":"books.book",
         "fields":{
-           "sku":"9780425018583",
+           "isbn":"9780425018583",
            "name":"Operation Ares",
            "published":"1970",
            "description":"Operation Ares depicts a dystopian future where the United States is controlled by an anti-technological leftist regime. The story traces protagonist John Castle's conflict with the government and his increasing involvement with a rebellion backed by a Martian colony which has severed its ties to the U.S. government.",
            "price":7.99,
            "category":1,
-           "image":"operation_ares.webp"
+           "image":"operation_ares.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":208,
+           "genre":"Science Fiction",
+           "rating":2.76
         }
      },
      {
         "pk":8,
         "model":"books.book",
         "fields":{
-           "sku":"9780312852986",
+           "isbn":"9780312852986",
            "name":"Pandora, by Holly Hollander",
            "published":"1990",
            "description":"The box is heavy, locked, and very old. The only clue to its contents is the name written in gold upon its PANDORA. Bright teenager Holly Hollander is understandably curious about what's inside, but when the box is opened, death is unleashed . . . and Holly is the only one who can solve the deadly puzzle.",
            "price":7.99,
            "category":1,
-           "image":"pandora_by_holly_hollander.webp"
+           "image":"pandora_by_holly_hollander.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":208,
+           "genre":"Mystery",
+           "rating":3.58
         }
      },
      {
         "pk":9,
         "model":"books.book",
         "fields":{
-           "sku":"9780312890339",
+           "isbn":"9780312890339",
            "name":"Peace",
            "published":"1975",
            "description":"The melancholy memoir of Alden Dennis Weer, an embittered old man living in a small midwestern town, reveals a miraculous dimension. For Weer's imagination has the power to obliterate time and reshape reality, transcending even death itself.",
            "price":7.99,
            "category":1,
-           "image":"peace.webp"
+           "image":"peace.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":272,
+           "genre":"Fantasy",
+           "rating":4.11
         }
      },
      {
         "pk":10,
         "model":"books.book",
         "fields":{
-           "sku":"9780765318794",
+           "isbn":"9780765318794",
            "name":"Pirate Freedom",
            "published":"2007",
            "description":"It starts with a confession from a priest. His past has reached further back than what many would consider possible. Before he was a priest, he was the pirate Captain Cristofo, and before he was a pirate, he was just Chris, a boy living in a monastery in Cuba the day after tomorrow. One day Chris realizes that he is not meant for the monastery he has grown up in, and leaves.",
            "price":7.99,
            "category":1,
-           "image":"pirate_freedom.webp"
+           "image":"pirate_freedom.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":320,
+           "genre":"Fantasy",
+           "rating":3.69
         }
      },
      {
         "pk":11,
         "model":"books.book",
         "fields":{
-           "sku":"9780765324597",
+           "isbn":"9780765324597",
            "name":"The Sorcerer's House",
            "published":"2010",
            "description":"In a contemporary town in the American midwest where he has no connections, Bax, an educated man recently released from prison, is staying in a motel. When he meets a real estate agent who tells him he is, to his utter surprise, the heir to a huge old house in town, long empty, he moves in. He is immediately confronted by an array of supernatural creatures and events, by love and danger.",
            "price":7.99,
            "category":1,
-           "image":"sorcerers_house.webp"
+           "image":"sorcerers_house.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":302,
+           "genre":"Fantasy",
+           "rating":3.74
         }
      },
      {
         "pk":12,
         "model":"books.book",
         "fields":{
-           "sku":"9780312890322",
+           "isbn":"9780312890322",
            "name":"The Devil in a Forest",
            "published":"1976",
            "description":"A weavers apprentice is caught in a battle between good and evil in his medieval forest village",
            "price":7.99,
            "category":1,
-           "image":"the_devil_in_a_forest.webp"
+           "image":"the_devil_in_a_forest.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":253,
+           "genre":"Fantasy",
+           "rating":3.68
         }
      },
      {
         "pk":13,
         "model":"books.book",
         "fields":{
-           "sku":"9780312872304",
+           "isbn":"9780312872304",
            "name":"There Are Doors",
            "published":"1988",
            "description":"There Are Doors is the story of a man who falls in love with a goddess from an alternate universe. She flees him, but he pursues her through doorways-interdimensional gateways-to the other place, determined to sacrifice his life, if necessary, for her love. For in her world, to be her mate . . . is to die.",
            "price":7.99,
            "category":1,
-           "image":"there_are_doors.webp"
+           "image":"there_are_doors.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":313,
+           "genre":"Mystery",
+           "rating":3.63
         }
      },
      {
         "pk":14,
         "model":"books.book",
         "fields":{
-           "sku":"9780312863944",
+           "isbn":"9780312863944",
            "name":"The Urth of the New Sun",
            "published":"1987",
            "description":"The long awaited sequel to Gene Wolfe’s four-volume classic, The Book of the New Sun. We return to the world of Severian, now the Autarch of Urth, as he leaves the planet on one of the huge spaceships of the alien Hierodules to travel across time and space to face his greatest test, to become the legendary New Sun or die.",
            "price":7.99,
            "category":1,
-           "image":"urth_of_the_new_sun.webp"
+           "image":"urth_of_the_new_sun.webp",
+           "author":"Gene Wolfe",
+           "series":"The Book of the New Sun",
+           "pages":372,
+           "genre":"Fantasy",
+           "rating":4.05
         }
      },
      {
         "pk":15,
         "model":"books.book",
         "fields":{
-           "sku":"9780765321350",
+           "isbn":"9780765321350",
            "name":"The Best of Gene Wolfe",
            "published":"2009",
            "description":"The definitive collection of some of the best fiction from esteemed writer Gene Wolfe.",
            "price":9.99,
            "category":2,
-           "image":"best_of_gene_wolfe.webp"
+           "image":"best_of_gene_wolfe.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":478,
+           "genre":"Short Stories",
+           "rating":4.25
         }
      },
      {
         "pk":16,
         "model":"books.book",
         "fields":{
-           "sku":"9781568658070",
+           "isbn":"9781568658070",
            "name":"The Book of the New Sun",
            "published":"1983",
            "description":"The Book of the New Sun is an extraordinary epic, set a million years in the future, on an Earth transformed in mysterious and wondrous ways, in a time when our present culture is no longer even a memory. Severian, the central character, is a torturer, exiled from his guild after falling in love with one of his victims, and journeying to the distant city of Thrax, armed with his ancient executioner's sword, Terminus Est. This edition contains the first four volumes of the series.",
            "price":9.99,
            "category":2,
-           "image":"book_of_the_new_sun.webp"
+           "image":"book_of_the_new_sun.webp",
+           "author":"Gene Wolfe",
+           "series":"The Book of the New Sun",
+           "pages":950,
+           "genre":"Fantasy",
+           "rating":4.23
         }
      },
      {
         "pk":17,
         "model":"books.book",
         "fields":{
-           "sku":"9780739416891",
+           "isbn":"9780739416891",
            "name":"The Book of the Short Sun",
            "published":"2001",
            "description":"When The Book of the Long Sun, Gene Wolfe’s science fantasy masterpiece, concluded, the Whorl – a giant generational starship sent out from Urth 300 years before – had arrived at its destination, a solar system with two habitable planets, Blue and Green. At the urging of Whorl’s religious leader, Patera Silk, the people left the ship for an uncertain future on Blue – a world already inhabited by the inhumi, blood-drinking aliens who take human form.",
            "price":9.99,
            "category":2,
-           "image":"book_of_the_short_sun.webp"
+           "image":"book_of_the_short_sun.webp",
+           "author":"Gene Wolfe",
+           "series":"The Book of the New Sun",
+           "pages":754,
+           "genre":"Fantasy",
+           "rating":4.48
         }
      },
      {
         "pk":18,
         "model":"books.book",
         "fields":{
-           "sku":"9780575094222",
+           "isbn":"9780575094222",
            "name":"The Fifth Head of Cerberus",
            "published":"1972",
            "description":"Far out from Earth, two sister planets, Saint Anne and Saint Croix, circle each other in an eternal dance. It is said a race of shapeshifters once lived here, only to perish when men came. But one man believes they can still be found, somewhere in the back of the beyond.",
            "price":9.99,
            "category":2,
-           "image":"fifth_head_of_cerberus.webp"
+           "image":"fifth_head_of_cerberus.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":252,
+           "genre":"Science Fiction",
+           "rating":3.99
         }
      },
      {
         "pk":19,
         "model":"books.book",
         "fields":{
-           "sku":"9780765302946",
+           "isbn":"9780765302946",
            "name":"Latro in the Mist",
            "published":"2006",
            "description":"This omnibus presents the story of Latro, a Roman mercenary who while fighting in Greece received a head injury that deprived him of his short-term memory but gave him in return the ability to see and converse with the supernatural creatures and the gods and goddesses, who invisibly inhabit the ancient landscape.",
            "price":9.99,
            "category":2,
-           "image":"latro_in_the_mist.webp"
+           "image":"latro_in_the_mist.webp",
+           "author":"Gene Wolfe",
+           "series":"Latro in the Mist",
+           "pages":640,
+           "genre":"Fantasy",
+           "rating":4.2
         }
      },
      {
         "pk":20,
         "model":"books.book",
         "fields":{
-           "sku":"9780312872915",
+           "isbn":"9780312872915",
            "name":"Litany of the Long Sun",
            "published":"1996",
            "description":"The story of Patera Silk, a devout priest whose destiny is wrapped up with the gods he serves, takes place within the Whorl, a vast, cylindrical starship that has traveled for generations and is crumbling into disrepair. Through a strange and amazing series of events, Silk finds himself descending to base thievery, running afoul of a notorious crime lord, befriending a cyborg soldier, and encountering at least one of the gods of Mainframe.",
            "price":9.99,
            "category":2,
-           "image":"litany_of_the_long_sun.webp"
+           "image":"litany_of_the_long_sun.webp",
+           "author":"Gene Wolfe",
+           "series":"Book of the New Sun",
+           "pages":543,
+           "genre":"Fantasy",
+           "rating":4.25
         }
      },
      {
         "pk":21,
         "model":"books.book",
         "fields":{
-           "sku":"9780575077102",
+           "isbn":"9780575077102",
            "name":"The Wizard Knight",
            "published":"2005",
            "description":"The Wizard Knight springs from the myths, legends and literature of times past. A teenager passes from Earth to a magical realm of seven worlds, where he is given a hero's adult body and named Able. Though forced to act as a man, inside he is still a boy, even as he sets off to find his destined sword and become a knight. ",
            "price":9.99,
            "category":2,
-           "image":"wizard_knight.webp"
+           "image":"wizard_knight.webp",
+           "author":"Gene Wolfe",
+           "series":"The Wizard Knight",
+           "pages":920,
+           "genre":"Fantasy",
+           "rating":4.14
         }
      },
      {
         "pk":22,
         "model":"books.book",
         "fields":{
-           "sku":"9780099392309",
+           "isbn":"9780099392309",
            "name":"Book of Days",
            "published":"1981",
            "description":"Short story collection by American science fiction author Gene Wolfe. Each story is paired with a holiday within the calendar year that is thematically linked to the content of the story.",
            "price":8.99,
            "category":3,
-           "image":"book_of_days.webp"
+           "image":"book_of_days.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":246,
+           "genre":"Science Fiction",
+           "rating":3.89
         }
      },
      {
         "pk":23,
         "model":"books.book",
         "fields":{
-           "sku":"9781645241201",
+           "isbn":"9781645241201",
            "name":"The Dead Man and Other Horror Stories",
            "published":"2023",
            "description":"This volume collects twenty-eight tales spanning nearly a half century--six of them never before collected--and gathered from venues as varied as men's magazines, periodicals devoted to short works of fantasy and science fiction, and tribute anthologies to the works of authors as wildly opposed in their literary visions as Dante and H. P. Lovecraft",
            "price":8.99,
            "category":3,
-           "image":"dead_man_and_other_horror_stories.webp"
+           "image":"dead_man_and_other_horror_stories.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":400,
+           "genre":"Short Stories",
+           "rating":4.17
         }
      },
      {
         "pk":24,
         "model":"books.book",
         "fields":{
-           "sku":"9780765310330",
+           "isbn":"9780765310330",
            "name":"Endangered Species",
            "published":"1989",
            "description":"Endangered Species is a hefty volume of over 30 unforgettable stories in a variety of genres-- SF, fantasy, horror, mainstream-many of them offering variations on themes and situations found in folklore and fairy tales, and including two stories, 'The Cat' and 'The Map,' which are set in the universe of his New Sun novels.",
            "price":8.99,
            "category":3,
-           "image":"endangered_species.webp"
+           "image":"endangered_species.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":512,
+           "genre":"Short Stories",
+           "rating":3.94
         }
      },
      {
         "pk":25,
         "model":"books.book",
         "fields":{
-           "sku":"9780312863548",
+           "isbn":"9780312863548",
            "name":"The Island of Doctor Death and Other Stories and Other Stories",
            "published":"1980",
            "description":"A superb collection of science fiction and fantasy stories, The Island of Doctor Death and Other Stories and Other Stories is a book that transcends all genre definitions. The stories within are mined with depth charges, explosions of meaning and illumination that will keep you thinking and feeling long after you have finished reading.",
            "price":8.99,
            "category":3,
-           "image":"island_of_doctor_death.webp"
+           "image":"island_of_doctor_death.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":384,
+           "genre":"Short Stories",
+           "rating":4.15
         }
      },
      {
         "pk":26,
         "model":"books.book",
         "fields":{
-           "sku":"9780915368839",
+           "isbn":"9780915368839",
            "name":"Plan(e)t Engineering",
            "published":"1984",
            "description":"A collection of short stories inspired by Wolfe's time as an engineer, it features articles he wrote for 'Plant Engineering', a leading journal for chemical engineers.",
            "price":8.99,
            "category":3,
-           "image":"planet_engineering.webp"
+           "image":"planet_engineering.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":155,
+           "genre":"Short Stories",
+           "rating":4.03
         }
      },
      {
         "pk":27,
         "model":"books.book",
         "fields":{
-           "sku":"9780765312037",
+           "isbn":"9780765312037",
            "name":"Starwater Strains",
            "published":"2000",
            "description":"A short story collection primarily showcasing some of Wolfe's best forays into sci-fi.",
            "price":8.99,
            "category":3,
-           "image":"starwater_strains.webp"
+           "image":"starwater_strains.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":352,
+           "genre":"Short Stories",
+           "rating":3.94
         }
      },
      {
         "pk":28,
         "model":"books.book",
         "fields":{
-           "sku":"9780312890490",
+           "isbn":"9780312890490",
            "name":"Storeys from the Old Hotel",
            "published":"1988",
            "description":"Storeys from the Old Hotel includes many of Gene Wolfe's most appealing and engaging works, from short-shorts that can be read in single setting to whimsical fantasy and even Sherlock Holmes pastiches. It is a literary feast for anyone interested in the best science fiction has to offer.",
            "price":8.99,
            "category":3,
-           "image":"storeys_from_the_old_hotel.webp"
+           "image":"storeys_from_the_old_hotel.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":331,
+           "genre":"Short Stories",
+           "rating":4.01
         }
      },
      {
         "pk":29,
         "model":"books.book",
         "fields":{
-           "sku":"9780312872786",
+           "isbn":"9780312872786",
            "name":"Strange Travelers",
            "published":"2000",
            "description":"Strange Travelers contains a whole decade of achievement. Some of these stories were award nominees, some were controversial, but each is unique and beautifully written.",
            "price":8.99,
            "category":3,
-           "image":"strange_travelers.webp"
+           "image":"strange_travelers.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":384,
+           "genre":"Short Stories",
+           "rating":3.92
         }
      },
      {
         "pk":30,
         "model":"books.book",
         "fields":{
-           "sku":"9780917488146",
+           "isbn":"9780917488146",
            "name":"The Wolfe Archipelago",
            "published":"1983",
            "description":"This title collects four stories, including 'The Death of Doctor Island, winner of the 1974 Nebula award for best novella",
            "price":8.99,
            "category":3,
-           "image":"wolfe_arhipelago.webp"
+           "image":"wolfe_arhipelago.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":135,
+           "genre":"Short Stories",
+           "rating":4.58
         }
      },
      {
         "pk":31,
         "model":"books.book",
         "fields":{
-           "sku":"9780921322320",
+           "isbn":"9780921322320",
            "name":"Young Wolfe",
            "published":"1992",
            "description":"A collection of nine early short stories from SF author Gene Wolfe, from 1951-1967.",
            "price":8.99,
            "category":3,
-           "image":"young_wolfe.webp"
+           "image":"young_wolfe.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":74,
+           "genre":"Short Stories",
+           "rating":3.22
         }
      },
      {
         "pk":32,
         "model":"books.book",
         "fields":{
-           "sku":"9781250846211",
+           "isbn":"9781250846211",
            "name":"The Wolfe at the Door",
            "published":"2023",
            "description":"The Wolfe at the Door is a brand new collection from one of America’s premiere literary giants, showcasing some material been seen before. Short stories, yes, but also poems, essays, and ephemera that gives us a window into the mind of a literary powerhouse whose world view changed generations of readers in their perception of the universe.",
            "price":8.99,
            "category":3,
-           "image":"wolfe_at_the_door.webp"
+           "image":"wolfe_at_the_door.webp",
+           "author":"Gene Wolfe",
+           "series":null,
+           "pages":468,
+           "genre":"Short Stories",
+           "rating":4.04
         }
      }
 ]
