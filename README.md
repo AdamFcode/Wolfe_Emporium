@@ -98,17 +98,17 @@ The standard footer for the website contains a simple copyright statement for th
 ![Footer](media/guest_footer.jpg)
 
 ## Bookstore
-The page for books displays them as cards, aligned four horizontally on desktop and stacked singularly on mobile. The card contains the book's image, it's name, date of publication, price and category. The user can sort the results with a dropdown menu above the bookstore and can click on either the image or the book name to see further details.
+The page for books displays them as cards, aligned four horizontally on desktop and stacked singularly on mobile. The card contains the book's image, it's name, author, page count, rating, genre, date of publication, price and category. If book is part of a series, this too will be visible. The user can sort the results with a dropdown menu above the bookstore and can click on either the image or the book name to see further details.
 
 ![Bookstore](media/guest_books.jpg)
 
 ## Book Detail
-Clicking into a book provides the same information as above, along with a description of the book's content. On mobile, the book image is hidden as it necessitated the user scrolling to receive all the pertinent information. Here the user can also select a quantity and add it to their cart if they wish.
+Clicking into a book provides the same information as above, along with a description of the book's content. On mobile, the book image is hidden as it necessitated the user scrolling to receive all the pertinent information. Here the user can also select a quantity and add it to their cart if they wish. If authenticated the user also has an option to add the book to their 'wishlist'. If the book is already in their Wishlist, they will instead have the option to remove it. If the user is not logged in, neither button is visible.
 
 ![Book Detail](media/guest_details.jpg)
 
 ## Partner Contact Form
-The partner contact form, accessible from both the navbar and the carousel, provides interested booksellers with a form which gathers basic information about their business. This is hypotethically to form a partnerhsip where The Wolfe Emporium would provide stock and promotional materials to interested booksellers in order to increase awareness in Gene Wolfe's work. 
+The partner contact form, accessible from both the navbar and the carousel, provides interested booksellers with a form which gathers basic information about their business. This is hypotethically to form a partnerhsip where The Wolfe Emporium would provide stock and promotional materials to interested booksellers in order to increase awareness in Gene Wolfe's work. If the user leaves fields blank, they will be informed that it is not possible to submit the form with blank fields. Should they submit a successful form, they will receive feedback confirming the success.
 
 ![Partner Contact](media/guest_partner.jpg)
 
@@ -116,6 +116,11 @@ The partner contact form, accessible from both the navbar and the carousel, prov
 The mission statement page, accessible from both the navbar and the carousel, contains three seperate chunks of content, each headed with a quote from Gene Wolfe's texts and a relevant image. This page provides information on Gene Wolfe himself as well as the intents of The Wolfe Emporium.
 
 ![About](media/guest_about.jpg)
+
+## Wishlist
+Authenticated Users have access to a self-moderated wishlist. This is accessible through their profile page, via a button above the delivery information section. The items in this list can be managed either directly in the list itself, or through the specific listings within the bookstore. Once on the wishlist page, a button is provided to bring you back to your profile, along with the usual navbar options at the top.
+
+![wishlist](media/wishlist.jpg)
 
 # New User Workflow
 ## Registration
