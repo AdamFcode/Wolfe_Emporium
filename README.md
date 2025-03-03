@@ -181,9 +181,22 @@ Having placed a successful order, the user receives a confirmation email as can 
 
 ![Email Confirm](media/email_order.jpg)
 
-If a registered user wishes to review all their past orders, they can access their profile from the account drop-down in the navbar. Once they navigate to this page, they can either update their personal details or review their past orders in a table. The order number on this table can be clicked to bring the user to the specific instance of that order, as detailed in the step above
+If a registered user wishes to review all their past orders, they can access their profile from the account drop-down in the navbar. Once they navigate to this page, they can either update their personal details or review their past orders in a table. The order number on this table can be clicked to bring the user to the specific instance of that order, as detailed in the step above. Here to is the access to their wishlist
 
 ![Order History](media/user_order_history.jpg)
+
+An authenticated use has access to a wishlist. A book can be added from the book details page if the user is logged in. The instance of a book in the wishlist is unique, meaning that there are no duplicate entries into the list.
+
+![Add Wishlist](media/add_wishlist.jpg)
+
+Once added, the book can now be verified as existing on the list via the wishlist page, accessible through the user's profile. It can be removed from the page either here, via a button, or via the same button in the book details page which has now changed to a 'remove from wishlist' button.
+
+![User Wishlist](media/user_wishlist.jpg)
+![User Wishlist](media/remove_wishlist.jpg)
+
+Once removed, it no longer appears on the user's list.
+
+![User Wishlist](media/empty_wishlist.jpg)
 
 # Testing
 ## User Stories
