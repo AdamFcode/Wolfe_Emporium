@@ -76,7 +76,7 @@ def partner_contact(request):
         
         if form.is_valid():
             messages.success(request, 'Your form was successfully submitted!')
-            return redirect('partner_contact')
+            return redirect('books:partner_contact')
         else:
             messages.error(request, 'There was an error with your form. Please double check your information.')
             print(form.errors)
