@@ -18,6 +18,7 @@ The Wolfe Emporium aims to fix that by reprinting Wolfe's bibliography and provi
   - Place an order
   - Safely register an account to track orders
   - Save my details for future orders
+  - Create, Read, Update and Delete a self-moderated Wishlist
 
 The above will be addressed under Testing below
 
@@ -211,6 +212,7 @@ As a user I want to use the search bar to locate books
 
   - The search bar allows the input of queries, searching through titles and categories to locate a match.
   - Upon entering a search term, the page redirects to the bookstore page with the relevant items displayed.
+<hr>
 
 As a user I want to browse the selection and inspect for further details
   
@@ -243,6 +245,11 @@ As a user I want to save my details for future orders
   - The profile page allows the user to enter their details and save them, calling them automatically in the relevant forms thereafter
   - Upon placing an order, the user can tick a box to automatically update their personal details from the order form
 <hr>
+
+As a user I want to Create, Read, Update and Delete a self-moderated Wishlist
+
+  - Possible to access a wishlist once authenticated
+  - Can add books, see them in the list and remove them as I wish
 
 ## Manual Testing
 ### Navigation
@@ -289,6 +296,14 @@ As a user I want to save my details for future orders
 **Tasks** Place order and provide payment
 
 **Steps** From the checkout page filled in fom and provided payment details. Clicked to place order and received confirmation of same.
+
+**Status**: Success
+<hr>
+
+### Moderate Wishlist
+**Tasks**: Create, read, update and delete items from the Wishlist
+
+**Steps**: Added multiple books to my wishlist, accessed it from my profile. Saw the correct books listed. Removed books from the list via both the wishlist page and the book details page.
 
 **Status**: Success
 <hr>
