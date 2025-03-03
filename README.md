@@ -100,7 +100,7 @@ The standard footer for the website contains a simple copyright statement for th
 ## Bookstore
 The page for books displays them as cards, aligned four horizontally on desktop and stacked singularly on mobile. The card contains the book's image, it's name, author, page count, rating, genre, date of publication, price and category. If book is part of a series, this too will be visible. The user can sort the results with a dropdown menu above the bookstore and can click on either the image or the book name to see further details.
 
-![Bookstore](media/guest_books.jpg)
+![Bookstore](media/guests_books.jpg)
 
 ## Book Detail
 Clicking into a book provides the same information as above, along with a description of the book's content. On mobile, the book image is hidden as it necessitated the user scrolling to receive all the pertinent information. Here the user can also select a quantity and add it to their cart if they wish. If authenticated the user also has an option to add the book to their 'wishlist'. If the book is already in their Wishlist, they will instead have the option to remove it. If the user is not logged in, neither button is visible.
@@ -375,20 +375,24 @@ A robots.txt file and sitemap.xml file were added to the repository to aid in se
 
 # Deployment
 The app was deployed on Heroku following these steps:
-  - Created a new app in heroku account with unique name
-  - Linked the app to the relevant gitpod repository
-  - Created Postgres account, acquired a database url and pasted it into config vars on Heroku.
-  - Provided pertinent information directly through the environ on both heroku and within the repository, such as secret keys and other data sensitive materials.
-  - Connected to the database from within the IDE and then migrated all relevant models to be accessible on the Heroku app.
-  - Ensured that DEBUG was set to false before deploying to Heroku.
-  - Added a procfile to repository to provide gunicorn functionality.
-  - Organised static material into relevant folders and uploaded same to an AWS bucket.
-  - Used template tags to populate static files from the AWS bucket onto the deployed site.
-  - Navigated to Heroku and deployed the branch manually.
-  - Monitored build log for errors
-  - Set Heroku to auto-build with every commit from gitpod.
-  - Ensured all config vars and environmental variables were correct before opening app from Heroku dashboard.
-  - Confrimed successful deployment of app.
+  - Created a new app in Heroku account with a unique name
+  - Linked the app to the relevant Gitpod repository
+  - Created a Postgres account, acquired a database URL, and pasted it into config vars on Heroku
+  - Added necessary configuration variables such as database URL, port, and secret key to Heroku’s config vars
+  - Ensured that sensitive data was not committed to version control by storing it in environment variables both on Heroku and within the repository
+  - Connected to the database from within the IDE and then migrated all relevant models to be accessible on the Heroku app
+  - Verified that all database connections were working correctly before proceeding
+  - Ensured that DEBUG was set to false before deploying to Heroku
+  - Added a Procfile to the repository to provide gunicorn functionality for handling web requests
+  - Organised static material into relevant folders and uploaded the files to an AWS bucket
+  - Configured the app to retrieve static files from the AWS bucket using template tags
+  - Navigated to Heroku and deployed the branch manually
+  - Monitored the build log for errors and resolved any deployment issues
+  - Set Heroku to auto-build with every commit from Gitpod for continuous deployment
+  - Double-checked all config vars and environment variables to ensure correct setup before launching the app from the Heroku dashboard
+  - Confirmed the successful deployment of the app by verifying that all features were functioning correctly
+
+
 
 # Credits
 ## Content
