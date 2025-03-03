@@ -21,7 +21,7 @@
   
           <h2 class="medieval-font">Browse Our Books</h2>
           <p class="turret-font">Every major Gene Wolfe publication available at great prices!</p>
-          <p><a class="btn btn-secondary" href="{% url 'books' %}">View details »</a></p>
+          <p><a class="btn btn-secondary" href="{% url 'books:books' %}">View details »</a></p>
         </div>
         <div class="col-lg-4 hero-slice">
           <img class="bd-placeholder-img rounded-circle" src='{{ MEDIA_URL }}gene_wolfe.webp' alt="Stylised drawing of Wolfe" width="140" height="140" aria-label="">
@@ -35,7 +35,7 @@
           
           <h2 class="medieval-font">Partner With Us</h2>
           <p class="turret-font">If you're a bookstore looking to upgrade your Wolfe section, contact us here!</p>
-          <p><a class="btn btn-secondary" href="{% url 'partner_contact' %}">View details »</a></p>
+          <p><a class="btn btn-secondary" href="{% url 'books:partner_contact' %}">View details »</a></p>
         </div>
       </div>
   

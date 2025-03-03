@@ -34,11 +34,11 @@
         <div class="row welcome">
             <div>
                 <!-- Form to collect partner information -->
-                <form id="partnerForm" method="POST" action="{% url 'partner_contact' %}" class="form black-text" enctype="multipart/form-data" novalidate>
+                <form id="partnerForm" method="POST" action="{% url 'books:partner_contact' %}" class="form black-text" enctype="multipart/form-data" novalidate>
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div>
-                        <a class="keep-shop" href="{% url 'books' %}">Cancel</a>
+                        <a class="keep-shop" href="{% url 'books:books' %}">Cancel</a>
                         <button type="submit" id="btt-part" aria-label="Submit Partner Form">Submit</button>
                     </div>
                     <hr>

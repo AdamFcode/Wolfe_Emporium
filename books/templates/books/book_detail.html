@@ -19,7 +19,7 @@
 
                 {% if book.category %}
                 <p class="card-body pb-0">
-                    <a class="black-text" href="{% url 'books' %}?category={{ book.category.name }}">
+                    <a class="black-text" href="{% url 'books:books' %}?category={{ book.category.name }}">
                         <i class="fas fa-tag mr-1"></i>{{ book.category.friendly_name }}
                     </a>
                 </p>
@@ -30,6 +30,21 @@
                 <p class="black-text card-body pb-0 text-center">Rating: {{book.rating}}</p>
             
             <h4 class="black-text text-center">${{ book.price }}</h4>
+
+            <hr>
+
+            <form method="POST" action="{% url 'books:remove_from_wishlist' book.id %}">
+                {% csrf_token %}
+                {% if user.is_authenticated %}
+                    {% if in_wishlist %}
+                        <button type="submit" class="text-center keep-shop btn-primary text-uppercase w-50 mx-auto d-block">Remove from Wishlist</button>
+                    {% else %}
+                        <a class="text-center keep-shop btn-outline-primary text-uppercase w-50 mx-auto d-block" href="{% url 'books:add_to_wishlist' book.id %}">Add to Wishlist</a>
+                    {% endif %}
+                {% endif %}
+            </form>            
+            
+            <hr>
 
             <form class="form text-center" action="{% url 'add_to_cart' book.id %}" method="POST">
                 {% csrf_token %}
@@ -68,7 +83,7 @@
                     <div class="col-12">
                         <input type="submit" class="text-uppercase" value="Add to Cart">
                         <hr>
-                        <a href="{% url 'books' %}" class="keep-shop">
+                        <a href="{% url 'books:books' %}" class="keep-shop">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>

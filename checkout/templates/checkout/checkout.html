@@ -17,7 +17,7 @@
       {% for item in cart_items %}
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <a href="{% url 'book_detail' item.book.id %}" class="checkout-img" aria-label="Book in cart">
+            <a href="{% url 'books:book_detail' item.book.id %}" class="checkout-img" aria-label="Book in cart">
                     <img class="w-100"  src="{{ item.book.image.url }}" alt="{{ book.name }}">
             </a>
             <bk>
